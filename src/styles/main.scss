@@ -1,0 +1,54 @@
+@tailwind base;
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: theme("colors.primary") theme("colors.primary");
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+
+*::-webkit-scrollbar-track {
+  background: theme("colors.base-200");
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: theme("colors.primary");
+  border-radius: 14px;
+}
+
+
+@tailwind components;
+@tailwind utilities;
+
+body {
+  overflow: auto;
+}
+
+
+.ib-logo {
+  content: url("$assets/logo_light.png");
+}
+
+
+:root {
+  --sidebar-width: 300px;
+  --header-height: 90px;
+}
+
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
